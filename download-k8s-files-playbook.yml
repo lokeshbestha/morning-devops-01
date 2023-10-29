@@ -1,0 +1,7 @@
+- name: download k8s files
+  hosts: k8s-master-machine
+  become: 'yes'
+  become_user: master
+  tasks:
+    - name: create directory dev-database
+      shell: mkdir dev-database
